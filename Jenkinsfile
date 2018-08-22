@@ -1,4 +1,4 @@
-def project = 'PROJECT_ID'
+def project = 'container-testing-1344'
 def  appName = 'gceme'
 def  feSvcName = "${appName}-frontend"
 def  imageTag = "gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
