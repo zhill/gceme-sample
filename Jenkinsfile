@@ -55,6 +55,12 @@ spec:
         }
       }
     }
+    stage('Anchore Container Scan') {
+      steps {
+        writeFile file: 'anchore_images', text: "${imageTag}"
+      	anchore name: 'anchore_images'
+      }
+    }
     stage('Deploy Canary') {
       // Canary branch
       when { branch 'canary' }
